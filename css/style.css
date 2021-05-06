@@ -1,0 +1,136 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	background-color: #fafafa;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* ================ NAVBAR ================ */
+.navbar {
+	/* Outer navbar box */
+	width: 100%;
+	height: auto;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 1px #dadada solid;
+	flex-wrap: wrap;
+}
+
+.nav {
+	/* Main nav block */
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	width: 95%;
+	height: inherit;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav .nav-item  {
+	/* Each nav-item */
+	display: inline-flex;
+	margin-top: .6em;
+	margin-bottom: .6em;
+}
+
+/* 1st Nav Item -> Brand Text */
+.nav-brand {
+	order: 1;
+	justify-content: flex-start;
+	flex-grow: 1;
+}
+.nav-brand .nav-brand-text {
+	display: inline;
+	font-size: 2rem;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+
+/* 2nd Nav Item -> Search */
+.nav-search {
+	/* For span position to work */
+	position: relative;
+	
+	order: 2;
+	justify-content: center;
+	flex-grow: 1;
+}
+.nav-search .searchbox{
+	background-image: url("../img/search-icon.png");
+	background-repeat: no-repeat;
+	background-size: 1.2em 1.2em;
+	background-position: .4em .4em;
+	padding: .4em 1.7em .4em 2em;
+	background-color: #fafafa;
+	border: 1px #cccccc solid;
+	color: #7d939f;
+	border-radius: 4px;
+	height: 1.2em;
+	width: 100%;
+	font-size: 1.2em;
+	font-weight: normal;
+	letter-spacing: .1em;
+	outline: none;
+}
+.nav-search .search-extras {
+	/* To make its position absolute w.r.t. div  */
+	position: absolute;
+	
+	/* Style */
+	top: .3em;
+	font-size: 1.2em;
+	font-weight: 400;
+	color: #979797;
+	cursor: text;
+	animation: 1s ease;
+	letter-spacing: .12em;
+}
+
+/* 3rd Nav Item -> Nav Links */
+.nav-links {
+	order: 3;
+	justify-content: flex-end;
+	flex-grow: 1;
+	flex-wrap: wrap;
+}
+.nav-links .nav-link {
+	border-radius: 4px;
+	color: #4d5f69;
+	display: inline-block;
+	font-size: 1em;
+	font-weight: 500;
+	letter-spacing: 2px;
+	padding: .55em;
+}
+.nav-links .nav-link:hover {
+	background-color: #dfdce3;
+	transition: .2s ease;
+}
+
+
+@media all and (max-width: 947px) {
+	.nav {
+		flex-wrap: wrap;
+	}
+	
+	.nav .nav-item {
+		justify-content: center;
+		margin-top: .2em;
+		margin-bottom: .2em;
+	}
+}
+
+@media all and (max-width: 530px) {
+	.nav .nav-item {
+		justify-content: center;
+		margin-top: .1em;
+		margin-bottom: .1em;
+	}
+}
